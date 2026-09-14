@@ -150,7 +150,10 @@ ambientes diferentes; se precisar reproduzir bit a bit, fixe as versões acima.
 │   ├── figures/                  # todas as figuras geradas
 │   ├── metrics/                  # todas as tabelas e métricas (CSV/JSON)
 │   └── RELATORIO_TECNICO.md      # relatório técnico completo
-├── models/                       # artefatos serializados
+├── docs/
+│   ├── Tech_Challenge_Fase1.pdf  # PDF de entrega (capa + relatório + figuras)
+│   └── ROTEIRO_VIDEO.md          # roteiro minutado do vídeo de demonstração
+├── models/                       # artefatos serializados (gerados, não versionados)
 ├── Dockerfile                    # imagem base + estágio "extra" (CNN)
 ├── docker-compose.yml
 ├── requirements.txt

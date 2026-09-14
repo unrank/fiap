@@ -20,3 +20,10 @@ Thumbs.db
 
 # HTML intermediario do PDF de entrega (o PDF fica versionado)
 docs/*.html
+
+# Cache de ferramentas
+.pytest_cache/
+.ruff_cache/
+
+# Tutorial de publicacao: documento de apoio, nao faz parte da entrega
+docs/TUTORIAL_GITHUB.md
