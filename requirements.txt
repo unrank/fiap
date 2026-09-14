@@ -1,0 +1,20 @@
+# ---------------------------------------------------------------------------
+# Tech Challenge - Fase 1 | Sistema de suporte ao diagnostico
+# Versoes minimas testadas em Python 3.12
+# ---------------------------------------------------------------------------
+
+# Nucleo cientifico
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+
+# Machine Learning classico
+scikit-learn>=1.4
+joblib>=1.3
+
+# Visualizacao
+matplotlib>=3.8
+seaborn>=0.13
+
+# Interpretabilidade
+shap>=0.44

@@ -1,0 +1,45 @@
+# Atalhos para as duas entregas. Uso:
+#   docker compose run --rm pipeline     # tarefa principal (tabular)
+#   docker compose run --rm predict      # demonstracao de inferencia
+#   docker compose run --rm tests        # suite de testes
+#   docker compose run --rm cnn          # EXTRA - visao computacional
+services:
+  pipeline:
+    build:
+      context: .
+      target: base
+    image: medai-fase1
+    volumes:
+      - ./reports:/app/reports
+      - ./models:/app/models
+      - ./data:/app/data
+    command: python scripts/run_pipeline.py
+
+  predict:
+    image: medai-fase1
+    build:
+      context: .
+      target: base
+    volumes:
+      - ./reports:/app/reports
+      - ./models:/app/models
+      - ./data:/app/data
+    command: python scripts/predict.py --demo
+
+  tests:
+    image: medai-fase1
+    build:
+      context: .
+      target: base
+    command: sh -c "pip install --no-cache-dir --user pytest && python -m pytest -q"
+
+  cnn:
+    build:
+      context: .
+      target: extra
+    image: medai-fase1-cnn
+    volumes:
+      - ./reports:/app/reports
+      - ./models:/app/models
+      - ./data:/app/data
+    command: python scripts/run_cnn.py --epochs 12

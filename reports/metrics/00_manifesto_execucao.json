@@ -1,0 +1,354 @@
+{
+  "executado_em": "2026-09-02T23:51:06+00:00",
+  "semente": 42,
+  "recall_alvo": 0.99,
+  "modo_rapido": false,
+  "dataset": {
+    "nome": "Breast Cancer Wisconsin (Diagnostic) - WDBC",
+    "n_amostras": 569,
+    "n_features": 30,
+    "prevalencia_maligno": 0.3726,
+    "valores_ausentes": 0,
+    "linhas_duplicadas": 0
+  },
+  "correlacao": {
+    "pares_acima_de_0.90": 21,
+    "colunas_redundantes": [
+      "area_mean",
+      "area_se",
+      "area_worst",
+      "concave_points_mean",
+      "concavity_mean",
+      "perimeter_mean",
+      "perimeter_se",
+      "radius_mean",
+      "radius_worst",
+      "texture_mean"
+    ]
+  },
+  "particoes": [
+    {
+      "particao": "treino",
+      "n": 341,
+      "pct_do_total": 59.9,
+      "benignos": 214,
+      "malignos": 127,
+      "prevalencia_maligno_%": 37.24
+    },
+    {
+      "particao": "validacao",
+      "n": 114,
+      "pct_do_total": 20.0,
+      "benignos": 71,
+      "malignos": 43,
+      "prevalencia_maligno_%": 37.72
+    },
+    {
+      "particao": "teste",
+      "n": 114,
+      "pct_do_total": 20.0,
+      "benignos": 72,
+      "malignos": 42,
+      "prevalencia_maligno_%": 36.84
+    }
+  ],
+  "selecao_campeao": {
+    "criterio": "media da ROC AUC de CV(treino) e da ROC AUC de validacao",
+    "campeao": "Regressao Logistica",
+    "ranking": [
+      {
+        "chave": "logistic_regression",
+        "modelo": "Regressao Logistica",
+        "roc_auc_cv_treino": 0.9944,
+        "desvio_cv": 0.0075,
+        "roc_auc_validacao": 0.9957,
+        "recall_validacao": 0.9767,
+        "score_selecao": 0.9951
+      },
+      {
+        "chave": "svm_rbf",
+        "modelo": "SVM (kernel RBF)",
+        "roc_auc_cv_treino": 0.9941,
+        "desvio_cv": 0.0083,
+        "roc_auc_validacao": 0.9957,
+        "recall_validacao": 0.9767,
+        "score_selecao": 0.99491
+      },
+      {
+        "chave": "gradient_boosting",
+        "modelo": "Gradient Boosting",
+        "roc_auc_cv_treino": 0.9929,
+        "desvio_cv": 0.0064,
+        "roc_auc_validacao": 0.9934,
+        "recall_validacao": 0.9535,
+        "score_selecao": 0.99317
+      },
+      {
+        "chave": "knn",
+        "modelo": "KNN (k-vizinhos mais proximos)",
+        "roc_auc_cv_treino": 0.9859,
+        "desvio_cv": 0.0141,
+        "roc_auc_validacao": 0.9974,
+        "recall_validacao": 0.9302,
+        "score_selecao": 0.99163
+      },
+      {
+        "chave": "random_forest",
+        "modelo": "Random Forest",
+        "roc_auc_cv_treino": 0.9884,
+        "desvio_cv": 0.0117,
+        "roc_auc_validacao": 0.9902,
+        "recall_validacao": 0.9535,
+        "score_selecao": 0.98928
+      },
+      {
+        "chave": "decision_tree",
+        "modelo": "Arvore de Decisao",
+        "roc_auc_cv_treino": 0.9814,
+        "desvio_cv": 0.0124,
+        "roc_auc_validacao": 0.9687,
+        "recall_validacao": 0.907,
+        "score_selecao": 0.97507
+      }
+    ]
+  },
+  "limiar": {
+    "valor": 0.0934,
+    "recall_validacao": 1.0,
+    "precisao_validacao": 0.7679,
+    "recall_alvo": 0.99
+  },
+  "teste": {
+    "campeao": "Regressao Logistica",
+    "limiar_padrao_0.50": {
+      "threshold": 0.5,
+      "accuracy": 0.9737,
+      "balanced_accuracy": 0.9692,
+      "precision": 0.9756,
+      "recall": 0.9524,
+      "specificity": 0.9861,
+      "f1": 0.9639,
+      "mcc": 0.9433,
+      "roc_auc": 0.996,
+      "pr_auc": 0.9943,
+      "brier": 0.0211,
+      "tn": 71,
+      "fp": 1,
+      "fn": 2,
+      "tp": 40,
+      "n": 114
+    },
+    "limiar_clinico": {
+      "threshold": 0.0934,
+      "accuracy": 0.9298,
+      "balanced_accuracy": 0.9395,
+      "precision": 0.8542,
+      "recall": 0.9762,
+      "specificity": 0.9028,
+      "f1": 0.9111,
+      "mcc": 0.8588,
+      "roc_auc": 0.996,
+      "pr_auc": 0.9943,
+      "brier": 0.0211,
+      "tn": 65,
+      "fp": 7,
+      "fn": 1,
+      "tp": 41,
+      "n": 114
+    },
+    "faixas_triagem": {
+      "verde": 66,
+      "vermelho": 33,
+      "amarelo": 15
+    },
+    "n_erros_limiar_clinico": 8
+  },
+  "referencia_logistica": [
+    {
+      "feature": "texture_worst",
+      "coeficiente": 1.4238,
+      "odds_ratio_por_dp": 4.1529,
+      "importancia": 1.4238
+    },
+    {
+      "feature": "radius_se",
+      "coeficiente": 1.2436,
+      "odds_ratio_por_dp": 3.4682,
+      "importancia": 1.2436
+    },
+    {
+      "feature": "symmetry_worst",
+      "coeficiente": 1.0591,
+      "odds_ratio_por_dp": 2.8838,
+      "importancia": 1.0591
+    },
+    {
+      "feature": "concave_points_mean",
+      "coeficiente": 0.9548,
+      "odds_ratio_por_dp": 2.5982,
+      "importancia": 0.9548
+    },
+    {
+      "feature": "area_se",
+      "coeficiente": 0.9334,
+      "odds_ratio_por_dp": 2.5432,
+      "importancia": 0.9334
+    },
+    {
+      "feature": "area_worst",
+      "coeficiente": 0.9241,
+      "odds_ratio_por_dp": 2.5196,
+      "importancia": 0.9241
+    },
+    {
+      "feature": "compactness_se",
+      "coeficiente": -0.9158,
+      "odds_ratio_por_dp": 0.4002,
+      "importancia": 0.9158
+    },
+    {
+      "feature": "concavity_worst",
+      "coeficiente": 0.9106,
+      "odds_ratio_por_dp": 2.4859,
+      "importancia": 0.9106
+    },
+    {
+      "feature": "radius_worst",
+      "coeficiente": 0.8966,
+      "odds_ratio_por_dp": 2.4512,
+      "importancia": 0.8966
+    },
+    {
+      "feature": "concavity_mean",
+      "coeficiente": 0.7905,
+      "odds_ratio_por_dp": 2.2046,
+      "importancia": 0.7905
+    }
+  ],
+  "interpretabilidade": {
+    "top10_permutacao": [
+      {
+        "feature": "symmetry_worst",
+        "queda_media": 0.00984
+      },
+      {
+        "feature": "texture_worst",
+        "queda_media": 0.0086
+      },
+      {
+        "feature": "concavity_worst",
+        "queda_media": 0.0078
+      },
+      {
+        "feature": "concave_points_mean",
+        "queda_media": 0.00288
+      },
+      {
+        "feature": "concave_points_worst",
+        "queda_media": 0.00281
+      },
+      {
+        "feature": "concavity_mean",
+        "queda_media": 0.00271
+      },
+      {
+        "feature": "radius_worst",
+        "queda_media": 0.00217
+      },
+      {
+        "feature": "area_worst",
+        "queda_media": 0.00177
+      },
+      {
+        "feature": "texture_se",
+        "queda_media": 0.00147
+      },
+      {
+        "feature": "perimeter_worst",
+        "queda_media": 0.00141
+      }
+    ],
+    "top10_shap": [
+      {
+        "feature": "texture_worst",
+        "shap_medio_abs": 0.06313
+      },
+      {
+        "feature": "symmetry_worst",
+        "shap_medio_abs": 0.04198
+      },
+      {
+        "feature": "concavity_worst",
+        "shap_medio_abs": 0.04108
+      },
+      {
+        "feature": "concave_points_mean",
+        "shap_medio_abs": 0.04035
+      },
+      {
+        "feature": "radius_se",
+        "shap_medio_abs": 0.03901
+      },
+      {
+        "feature": "concavity_mean",
+        "shap_medio_abs": 0.03548
+      },
+      {
+        "feature": "radius_worst",
+        "shap_medio_abs": 0.03442
+      },
+      {
+        "feature": "concave_points_worst",
+        "shap_medio_abs": 0.03374
+      },
+      {
+        "feature": "area_worst",
+        "shap_medio_abs": 0.03247
+      },
+      {
+        "feature": "perimeter_worst",
+        "shap_medio_abs": 0.03075
+      }
+    ]
+  },
+  "robustez_ausentes": [
+    {
+      "pct_celulas_ausentes": "0%",
+      "recall": 0.9762,
+      "precisao": 0.8542,
+      "f1": 0.9111,
+      "roc_auc": 0.996,
+      "falsos_negativos": 1
+    },
+    {
+      "pct_celulas_ausentes": "5%",
+      "recall": 0.9762,
+      "precisao": 0.8913,
+      "f1": 0.9318,
+      "roc_auc": 0.996,
+      "falsos_negativos": 1
+    },
+    {
+      "pct_celulas_ausentes": "10%",
+      "recall": 0.9762,
+      "precisao": 0.9111,
+      "f1": 0.9425,
+      "roc_auc": 0.995,
+      "falsos_negativos": 1
+    },
+    {
+      "pct_celulas_ausentes": "20%",
+      "recall": 0.9524,
+      "precisao": 0.8696,
+      "f1": 0.9091,
+      "roc_auc": 0.9901,
+      "falsos_negativos": 2
+    }
+  ],
+  "modelo_salvo": "models\\modelo_diagnostico.joblib",
+  "melhores_hiperparametros": {
+    "C": 1.0,
+    "class_weight": null
+  },
+  "duracao_segundos": 285.3
+}

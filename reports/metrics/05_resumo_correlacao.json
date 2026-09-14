@@ -1,0 +1,28 @@
+{
+  "limiar_multicolinearidade": 0.9,
+  "n_pares_redundantes": 21,
+  "colunas_redundantes_sugeridas": [
+    "area_mean",
+    "area_se",
+    "area_worst",
+    "concave_points_mean",
+    "concavity_mean",
+    "perimeter_mean",
+    "perimeter_se",
+    "radius_mean",
+    "radius_worst",
+    "texture_mean"
+  ],
+  "top10_correlacao_com_alvo": {
+    "concave_points_worst": 0.7936,
+    "perimeter_worst": 0.7829,
+    "concave_points_mean": 0.7766,
+    "radius_worst": 0.7765,
+    "perimeter_mean": 0.7426,
+    "area_worst": 0.7338,
+    "radius_mean": 0.73,
+    "area_mean": 0.709,
+    "concavity_mean": 0.6964,
+    "concavity_worst": 0.6596
+  }
+}

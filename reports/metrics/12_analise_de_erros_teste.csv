@@ -1,0 +1,9 @@
+,indice_original,classe_real,classe_prevista,prob_malignidade,tipo_erro,concave_points_worst,perimeter_worst,concave_points_mean,radius_worst,perimeter_mean
+0,455,Benigno,Maligno,0.5113,falso positivo,0.078,96.69,0.033,15.05,86.34
+1,456,Benigno,Maligno,0.2372,falso positivo,0.068,86.04,0.02,13.12,74.87
+2,208,Benigno,Maligno,0.2276,falso positivo,0.113,99.48,0.051,14.55,87.02
+3,560,Benigno,Maligno,0.2026,falso positivo,0.105,100.2,0.043,15.3,91.38
+4,448,Benigno,Maligno,0.1164,falso positivo,0.096,108.1,0.029,16.3,94.25
+5,347,Benigno,Maligno,0.0967,falso positivo,0.125,114.2,0.035,17.27,94.87
+6,128,Benigno,Maligno,0.0944,falso positivo,0.142,105.9,0.085,16.11,99.58
+7,73,Maligno,Benigno,0.0635,FALSO NEGATIVO,0.138,110.3,0.051,16.57,90.43

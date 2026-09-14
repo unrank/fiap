@@ -1,0 +1,12 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+.venv
+venv
+.ipynb_checkpoints
+reports/figures/*
+reports/metrics/*
+models/*
+data/medmnist
+docs/*.pdf

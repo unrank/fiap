@@ -1,0 +1,9 @@
+# ---------------------------------------------------------------------------
+# Dependencias APENAS do entregavel EXTRA (visao computacional / CNN).
+# Instale com:  pip install -r requirements-extra.txt
+# Para CPU-only (menor download):
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+# ---------------------------------------------------------------------------
+torch>=2.2
+torchvision>=0.17
+medmnist>=3.0

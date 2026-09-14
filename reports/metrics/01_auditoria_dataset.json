@@ -1,0 +1,24 @@
+{
+  "n_rows": 569,
+  "n_cols": 31,
+  "n_numeric": 30,
+  "n_categorical": 1,
+  "categorical_columns": [
+    "diagnosis"
+  ],
+  "missing_total": 0,
+  "missing_by_column": {},
+  "duplicated_rows": 0,
+  "duplicated_ids": null,
+  "constant_columns": [],
+  "impossible_zeros": {},
+  "class_counts": {
+    "B": 357,
+    "M": 212
+  },
+  "class_balance_pct": {
+    "B": 62.74,
+    "M": 37.26
+  },
+  "imbalance_ratio": 1.684
+}

@@ -1,0 +1,4 @@
+particao,n,pct_do_total,benignos,malignos,prevalencia_maligno_%
+treino,341,59.9,214,127,37.24
+validacao,114,20.0,71,43,37.72
+teste,114,20.0,72,42,36.84

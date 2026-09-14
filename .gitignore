@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Artefatos pesados de execucao
+models/*.joblib
+models/*.pt
+data/medmnist/
+*.npz
+
+# SO / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# HTML intermediario do PDF de entrega (o PDF fica versionado)
+docs/*.html

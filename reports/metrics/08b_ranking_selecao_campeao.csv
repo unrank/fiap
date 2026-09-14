@@ -1,0 +1,7 @@
+chave,modelo,roc_auc_cv_treino,desvio_cv,roc_auc_validacao,recall_validacao,score_selecao
+logistic_regression,Regressao Logistica,0.9944,0.0075,0.9957,0.9767,0.9951
+svm_rbf,SVM (kernel RBF),0.9941,0.0083,0.9957,0.9767,0.99491
+gradient_boosting,Gradient Boosting,0.9929,0.0064,0.9934,0.9535,0.99317
+knn,KNN (k-vizinhos mais proximos),0.9859,0.0141,0.9974,0.9302,0.99163
+random_forest,Random Forest,0.9884,0.0117,0.9902,0.9535,0.98928
+decision_tree,Arvore de Decisao,0.9814,0.0124,0.9687,0.907,0.97507
